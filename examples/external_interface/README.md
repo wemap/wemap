@@ -27,10 +27,10 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 
     ...
     <script type="text/javascript"
-            class="wemap_livemap"
-            src="https://livemap.getwemap.com/js/livemap.min.js"
-            data-emmid="xxxxx"
-            data-token="xxxxx">
+      class="wemap_livemap"
+      src="https://livemap.getwemap.com/js/livemap.min.js"
+      data-emmid="xxxxx"
+      data-token="xxxxx">
     </script>
 
     <script type="text/javascript">
@@ -38,12 +38,6 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
           // fired when map instance is ready to interact
           // store here a reference af a Livemap's ExternalInterface
           window.livemap = instance;
-          window.livemap.addEventListener('mapUpdate', function(data) {
-              console.log('on livemap update', data);
-          });
-          window.livemap.addEventListener('pinpointClick', function(data) {
-              console.log('on livemap pinpoint click', data);
-          });
       });
     </script>
 
