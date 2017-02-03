@@ -23,24 +23,20 @@
       </button>
     </div>
 
-    <div id="wemap_instance_1" style="height:600px;width:800px;position:absolute;left:50%;top:50%;margin-left:-400px;margin-top:-300px"></div>
-
-    <div id="after-body" class="display:none;visibility:none;height:0;font-size:0;">
-        <!-- scripts -->
-        <script type="text/javascript" src="//livemap.getwemap.com/js/livemap.min.js"></script>
-        <script type="text/javascript">
-          var config = {
-            // required properties
-            emmid: xxxxx,
-            token: xxxxx,
-            container: document.querySelector('#wemap_instance_1'),
-            // optionnals properties
-            ...
-          };
-          var livemap = W.createLivemap(config);
+    <div id="wemap_instance_1" style="height:600px;width:800px;position:absolute;left:50%;top:50%;margin-left:-400px;margin-top:-300px">
+        <script class="wemap_livemap"
+                type="text/javascript"
+                src="https://livemap.getwemap.com/js/livemap.min.js"
+                data-emmid="xxxxx"
+                data-token="xxxxx">
         </script>
     </div>
 
+    <script type="text/javascript">
+        wemap.v1.getExternalInterface(function(instance) {
+            // do something
+        });
+    </script>
 </body>
 
 </html>
