@@ -29,9 +29,6 @@
       wemap.v1.getExternalInterface(function(instance) {
           // do something
           window.livemap = instance;
-          window.livemap.addEventListener('mapUpdate', function(data) {
-              alert('On livemap update called', data);
-          });
           window.livemap.addEventListener('pinpointClick', function(data) {
               alert('on livemap pinpoint click called', data);
           });

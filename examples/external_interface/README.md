@@ -12,8 +12,7 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 1. [Initialisation d'une livemap](#init_native_javascript)
 2. [Écouter/Supprimer des événements provenant d'une Livemap](#externals_listeners)
 3. [Événements d'écoute d'une Livemap](#events)
-  1. mapUpdate
-  2. pinpointClick
+  1. pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
   1. Afficher les points d'intérêts (pinpoints) autour de moi
   2. Centrer la carte sur une position spécifique
@@ -76,17 +75,9 @@ window.livemap.removeEventListener(eventName <String>, callbackListener <Functio
 <a name="events" />
 ## 3. Événements d'écoute d'une Livemap
 
-### 3.2 mapUpdate
+### 3.1 pinpointClick
 
-> Événements propagés lorsqu'une nouvelle pile de pinpoints d'une carte ont été chargés
-
-```javascript
-window.livemap.addEventListener('mapUpdate', function __callback__ (){});
-```
-
-### 3.2 pinpointClick
-
-> Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint
+> Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint sur la carte.
 
 ```javascript
 window.livemap.addEventListener('pinpointClick', function __callback__ (){});
@@ -95,7 +86,7 @@ window.livemap.addEventListener('pinpointClick', function __callback__ (){});
 <a name="methods"></a>
 ## 4. Méthode ouverte d'une livemap
 
-### 4.1 Afficher les points d'intérêts (pinpoints) autour de moi
+### 4.1 Centrer la carte sur la position de l'utilisateur
 
 ```javascript
 window.livemap.aroundMe();
@@ -123,7 +114,7 @@ window.livemap.getCenter();
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/get_center.html)
 
-### 4.4 Obtenir l'objet pinpoint le plus proche d'une position
+### 4.4 Obtenir le pinpoint le plus proche d'une position
 
 ```javascript
 window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
@@ -152,6 +143,7 @@ window.livemap.setZoom(zoom <Number>);
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/set_zoom.html)
 
 <a name="types"></a>
+
 ### 5. Types de données
 
 **Position**
