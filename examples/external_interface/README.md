@@ -146,22 +146,19 @@ window.livemap.setZoom(zoom <Number>);
 
 ```javascript
 var obj = {
-    latitude: 12.34,
-    longitude: 56.78
+    latitude: 38.8977,
+    longitude: 77.0365
 };
 ```
 
 **Pinpoint**
 ```javascript
 var obj = {
-  id: ,
-  name: ,
-  address: ,
-  description: ,
-  latitude: ,
-  longitude: ,
-  updated: ,
-  created: ,
-  distanceFromCenter:
+    id: 12345,
+    name: 'The White House',
+    address: '1600 Pennsylvania Avenue, Washington D.C.',
+    description: 'The White House is the official residence and principal workplace of the President of the United States.',
+    latitude: 38.8977,
+    longitude: 77.0365
 };
 ```
