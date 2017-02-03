@@ -11,6 +11,8 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 
 1. [Initialisation d'une livemap](#init_native_javascript)
 2. [Écouter/Supprimer des événements provenant d'une Livemap](#externals_listeners)
+  1. addEventListener
+  2. removeEventListener
 3. [Événements d'écoute d'une Livemap](#events)
   1. pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
