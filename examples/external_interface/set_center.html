@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>External Interface - Set Center</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css"
+      href="https://rawgit.com/wemap/wemap/master/examples/demo-global-styles.css" />
+    <!-- your code -->
+    <script type="text/javascript">
+    function onSetCenterClick() {
+      if (window.livemap) {
+        var coords = {
+          latitude: 38.8977,
+          longitude: -77.0365
+        };
+        window.livemap.setCenter(coords);
+      }
+    }
+    </script>
+    <!-- endof -->
+</head>
+
+<body>
+
+  <!-- demo code only -->
+  <div id="demo-content-header">
+    <button onclick="javascript:onSetCenterClick();">
+      <span>Set Center</span>
+    </button>
+  </div>
+  <!-- endof -->
+
+  <!-- your code -->
+  <div id="demo-content-container">
+    <script type="text/javascript"
+      class="wemap_livemap"
+      src="https://livemap.getwemap.com/js/livemap.min.js"
+      data-dist="ufe"
+      data-token="at53233163901580.32126913" ></script>
+  </div>
+
+  <script type="text/javascript">
+    wemap.v1.getExternalInterface(function(instance) {
+        // do something
+        window.livemap = instance;
+    });
+  </script>
+  <!-- endof -->
+
+</body>
+
+</html>

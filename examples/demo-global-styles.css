@@ -46,3 +46,6 @@ body {
   bottom: 0;
   position: absolute;
 }
+#demo-content-container.no-header {
+  top: 0;
+}
