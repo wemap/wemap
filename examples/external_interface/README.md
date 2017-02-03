@@ -14,12 +14,11 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 3. [Événements d'écoute d'une Livemap](#events)
   1. pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
-  1. Afficher les points d'intérêts (pinpoints) autour de moi
-  2. Centrer la carte sur une position spécifique
-  3. Obtenir la position du centre de la carte en cours d'affichage
-  4. Obtenir l'objet pinpoint le plus proche d'une position
-  5. Affecter un centre sur la carte en conservant le zoom en cours
-  6. Affecter un zoom sur la carte en conservant le centre en cours
+  1. Centrer la carte sur une position spécifique
+  2. Obtenir la position du centre de la carte en cours d'affichage
+  3. Obtenir l'objet pinpoint le plus proche d'une position
+  4. Affecter un centre sur la carte en conservant le zoom en cours
+  5. Affecter un zoom sur la carte en conservant le centre en cours
 5. [Types de données reçues](#types)
 
 <a name="init_native_javascript"></a>
@@ -86,14 +85,7 @@ window.livemap.addEventListener('pinpointClick', function __callback__ (){});
 <a name="methods"></a>
 ## 4. Méthode ouverte d'une livemap
 
-### 4.1 Centrer la carte sur la position de l'utilisateur
-
-```javascript
-window.livemap.aroundMe();
-```
-[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/around_me.html)
-
-### 4.2 Centrer la carte sur une position spécifique
+### 4.1 Centrer la carte sur une position spécifique
 
 ```javascript
 window.livemap.centerTo(latlng <Position>, zoom <Number>);
@@ -101,7 +93,7 @@ window.livemap.centerTo(latlng <Position>, zoom <Number>);
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/center_to.html)
 
-### 4.3 Obtenir la position du centre de la carte en cours d'affichage
+### 4.2 Obtenir la position du centre de la carte en cours d'affichage
 
 ```javascript
 // Retourne un objet Position
@@ -114,7 +106,7 @@ window.livemap.getCenter();
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/get_center.html)
 
-### 4.4 Obtenir le pinpoint le plus proche d'une position
+### 4.3 Obtenir le pinpoint le plus proche d'une position
 
 ```javascript
 window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
@@ -126,7 +118,7 @@ window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/find_nearest_pinpoint.html)
 
-### 4.5 Affecter un centre sur la carte en conservant le zoom en cours
+### 4.4 Affecter un centre sur la carte en conservant le zoom en cours
 
 ```javascript
 window.livemap.setCenter(center <Position>);
@@ -134,7 +126,7 @@ window.livemap.setCenter(center <Position>);
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/set_center.html)
 
-### 4.6 Affecter un zoom sur la carte en conservant le centre en cours
+### 4.5 Affecter un zoom sur la carte en conservant le centre en cours
 
 ```javascript
 window.livemap.setZoom(zoom <Number>);
