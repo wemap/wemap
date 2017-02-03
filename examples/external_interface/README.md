@@ -12,6 +12,8 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 1. [Initialisation d'une livemap](#init_native_javascript)
 2. [Écouter/Supprimer des événements provenant d'une Livemap](#externals_listeners)
 3. [Événements d'écoute d'une Livemap](#events)
+  1. mapUpdate
+  2. pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
   1. Afficher les points d'intérêts (pinpoints) autour de moi
   2. Centrer la carte sur une position spécifique
@@ -58,15 +60,14 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 
 ### 2.1. addEventListener
 
-La méthode `addEventListener` permet de s'abonner à certains événements émanant (paramètre [eventName](#events)) d'une instance d'une livemap
+> La méthode `addEventListener` permet de s'abonner à certains événements émanant (paramètre [eventName](#events)) d'une instance d'une livemap
 
 ```javascript
 window.livemap.addEventListener(eventName <String>, callbackListener <Function>);
 ```
 
 ### 2.2. removeEventListener
-
-La méthode `removeEventListener` permet de se désabonner des événements émanant d'une instance d'une livemap
+> La méthode `removeEventListener` permet de se désabonner des événements émanant d'une instance d'une livemap
 
 ```javascript
 window.livemap.removeEventListener(eventName <String>, callbackListener <Function>);
@@ -75,19 +76,21 @@ window.livemap.removeEventListener(eventName <String>, callbackListener <Functio
 <a name="events" />
 ## 3. Événements d'écoute d'une Livemap
 
-**mapUpdate**
+### 3.2 mapUpdate
+
+> Événements propagés lorsqu'une nouvelle pile de pinpoints d'une carte ont été chargés
 
 ```javascript
 window.livemap.addEventListener('mapUpdate', function __callback__ (){});
 ```
-Événements propagés lorsqu'une nouvelle pile de pinpoints d'une carte ont été chargés
 
-**pinpointClick**
+### 3.2 pinpointClick
+
+> Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint
 
 ```javascript
 window.livemap.addEventListener('pinpointClick', function __callback__ (){});
 ```
-Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint
 
 <a name="methods"></a>
 ## 4. Méthode ouverte d'une livemap
@@ -105,6 +108,8 @@ window.livemap.aroundMe();
 window.livemap.centerTo(latlng <Position>, zoom <Number>);
 ```
 
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/center_to.html)
+
 ### 4.3 Obtenir la position du centre de la carte en cours d'affichage
 
 ```javascript
@@ -116,6 +121,8 @@ window.livemap.getCenter();
 // output: {latitude: 1.451, longitude: 1.456}
 ```
 
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/get_center.html)
+
 ### 4.4 Obtenir l'objet pinpoint le plus proche d'une position
 
 ```javascript
@@ -126,17 +133,23 @@ window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
 });
 ```
 
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/find_nearest_pinpoint.html)
+
 ### 4.5 Affecter un centre sur la carte en conservant le zoom en cours
 
 ```javascript
 window.livemap.setCenter(center <Position>);
 ```
 
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/set_center.html)
+
 ### 4.6 Affecter un zoom sur la carte en conservant le centre en cours
 
 ```javascript
 window.livemap.setZoom(zoom <Number>);
 ```
+
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/set_zoom.html)
 
 <a name="types"></a>
 ### 5. Types de données
