@@ -12,8 +12,8 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 1. [Initialisation d'une livemap](#init_native_javascript)
 2. [Écouter/Supprimer des événements provenant d'une instance d'une Livemap](#externals_listeners)
 3. [Événements d'écoute d'une carte](#events)
-4. [Méthode ouverte d'une livemap](#publics_methods)
-5. [Exemple d'un Pinpoint Object](#pinpoint_object)
+4. [Méthode ouverte d'une livemap](#methods)
+5. [Types de données](#types)
 
 <a name="init_native_javascript"></a>
 ### 1. Initialisation de l'ExternalInterface d'une livemap
@@ -89,7 +89,7 @@ window.livemap.addEventListener('pinpointClick', function __callback__ (){});
 ```
 Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint
 
-<a name="publics_methods"></a>
+<a name="methods"></a>
 ### 4. Méthode ouverte d'une livemap
 
 **Afficher les points d'intérêts (pinpoints) autour de moi**
@@ -120,8 +120,10 @@ window.livemap.getCenter();
 **Obtenir l'objet pinpoint le plus proche d'une position**
 
 ```javascript
-window.livemap.findNearestPinpoint(center <Position>, function(result) {
-    // result.pinpoint contient un Pinpoint
+window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
+    // un Pinpoint a été trouvé
+}, function() {
+    // pas de Pinpoint trouvé
 });
 ```
 
@@ -137,7 +139,7 @@ window.livemap.setCenter(center <Position>);
 window.livemap.setZoom(zoom <Number>);
 ```
 
-<a name="pinpoint_object"></a>
+<a name="types"></a>
 ### 5. Types de données
 
 **Position**
