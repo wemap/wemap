@@ -34,12 +34,14 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
   <body>
 
     ...
+    <div id="my-livemap-container" style="width:600px;height:400px;">
     <script type="text/javascript"
       class="wemap_livemap"
       src="https://livemap.getwemap.com/js/livemap.min.js"
       data-emmid="xxxxx"
       data-token="xxxxx">
     </script>
+    </div>
 
     <script type="text/javascript">
       wemap.v1.getExternalInterface(function(instance) {
