@@ -14,7 +14,8 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
   1. addEventListener
   2. removeEventListener
 3. [Événements d'écoute d'une Livemap](#events)
-  1. pinpointClick
+  1. mapUpdate
+  2. pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
   1. Centrer la carte sur une position spécifique
   2. Obtenir la position du centre de la carte en cours d'affichage
@@ -78,12 +79,24 @@ window.livemap.removeEventListener(eventName <String>, callbackListener <Functio
 <a name="events" />
 ## 3. Événements d'écoute d'une Livemap
 
-### 3.1 pinpointClick
+### 3.1 mapUpdate
+
+> Cet événement est propagé lorsque la carte a chargé un nouveau jeu de données.
+
+```javascript
+window.livemap.addEventListener('mapUpdate', function() {
+    alert('map update');
+});
+```
+
+### 3.2 pinpointClick
 
 > Événements propagés lorsque le visiteur d'une carte clique sur un pinpoint sur la carte.
 
 ```javascript
-window.livemap.addEventListener('pinpointClick', function __callback__ (){});
+window.livemap.addEventListener('pinpointClick', function(evt) {
+    alert('pinpoint click', evt.pinpoint);
+});
 ```
 
 <a name="methods"></a>
