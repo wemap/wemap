@@ -123,17 +123,21 @@ window.livemap.getCenter();
 
 [exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/get_center.html)
 
-### 4.3 Obtenir le pinpoint le plus proche d'une position
+### 4.3 Obtenir les pinpoints les plus proche d'une position
 
 ```javascript
-window.livemap.findNearestPinpoint(center <Position>, function(pinpoint) {
-    // un Pinpoint a été trouvé
+window.livemap.findNearestPinpoints({
+    center: window.livemap.getCenter()
+}, function(pinpoints) {
+    console.log('nearest pinpoints loaded: ', pinpoints);
+    
 }, function() {
-    // pas de Pinpoint trouvé
+    alert('unable to find pinpoint');
+    
 });
 ```
 
-[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/find_nearest_pinpoint.html)
+[exemple](https://github.com/wemap/welcome/blob/master/examples/external_interface/find_nearest_pinpoints.html)
 
 ### 4.4 Affecter un centre sur la carte en conservant le zoom en cours
 
