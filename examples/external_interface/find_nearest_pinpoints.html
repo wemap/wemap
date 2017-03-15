@@ -13,15 +13,20 @@
     <script type="text/javascript">
     function onFindNearestPinpointClick() {
       if (window.livemap) {
+        // center position
         var coords = {
           latitude: 38.8977,
           longitude: -77.0365
         };
-        window.livemap.findNearestPinpoint(coords, function __onFindSuccess__ (pinpoint) {
+        window.livemap.findNearestPinpoints({
+          center: coords
+        }, function __onFindSuccess__ (array_of_pinpoints) {
           alert('a pinpoint has been found, open you browser console to see its content');
-          console.log('pinpoint find on map => ', pinpoint);
+          console.log('pinpoints find on map => ', array_of_pinpoints);
+            
         } , function __onFindError__ () {
           alert('error: no pinpoint found');
+            
         });
       }
     }
