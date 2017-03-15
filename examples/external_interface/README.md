@@ -11,17 +11,17 @@ L'objet `ExternalInterface` permet également aux utilisateurs un accès à [cer
 
 1. [Initialisation d'une livemap](#init_native_javascript)
 2. [Écouter/Supprimer des événements provenant d'une Livemap](#externals_listeners)
-  1. addEventListener
-  2. removeEventListener
+  - addEventListener
+  - removeEventListener
 3. [Événements d'écoute d'une Livemap](#events)
-  1. mapUpdate
-  2. pinpointClick
+  - mapUpdate
+  - pinpointClick
 4. [Méthode ouverte d'une livemap](#methods)
-  1. Centrer la carte sur une position spécifique
-  2. Obtenir la position du centre de la carte en cours d'affichage
-  3. Obtenir l'objet pinpoint le plus proche d'une position
-  4. Affecter un centre sur la carte en conservant le zoom en cours
-  5. Affecter un zoom sur la carte en conservant le centre en cours
+  - Centrer la carte sur une position spécifique
+  - Obtenir la position du centre de la carte en cours d'affichage
+  - Obtenir l'objet pinpoint le plus proche d'une position
+  - Affecter un centre sur la carte en conservant le zoom en cours
+  - Affecter un zoom sur la carte en conservant le centre en cours
 5. [Types de données reçues](#types)
 
 <a name="init_native_javascript"></a>
